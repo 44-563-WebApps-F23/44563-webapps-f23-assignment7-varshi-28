@@ -39,6 +39,8 @@
         <button onclick="addEnd()" style="cursor: pointer; background-color: #9d63d3; color: white;">Add End</button>
         <button onclick="addFront()" style="cursor: pointer; background-color:#9d63d3; color: white;">Add Front</button>
         <button onclick="remove()" style="cursor: pointer; background-color:#9d63d3; color: white;">Remove</button>
+        <button onclick="swap()" style="cursor: pointer; background-color:#9d63d3; color: white;">Swap</button>
+    
     </div>
 </body>
 
@@ -69,12 +71,30 @@
     }
 
     function remove() {
-        var mergerItems = document.getElementsByClassName("merger");
+        const mergerItems = document.getElementsByClassName("merger");
         if (mergerItems.length > 0) {
         const middleIndex = Math.floor(mergerItems.length / 2);
         const container = document.getElementById('target');
         container.removeChild(mergerItems[middleIndex]);
      }
     }
+
+    function swap() {
+        const mergerItems = document.getElementsByClassName("merger");
+
+        let a, b;
+        do {
+            a = Math.floor(Math.random() * mergerItems.length);
+            b = Math.floor(Math.random() * mergerItems.length);
+        } while (a === b);
+
+        const initialText = mergerItems[a];
+        const finalText = mergerItems[b];
+
+        const temp = initialText.innerHTML;
+        initialText.innerHTML = finalText.innerHTML;
+        finalText.innerHTML = temp;
+        }
+
 </script>
 </html>

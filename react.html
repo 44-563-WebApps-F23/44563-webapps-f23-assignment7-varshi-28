@@ -24,16 +24,29 @@
         reactTime = Date.now();
         console.log("reactTime:", reactTime);
       }
-  
-      function startTime() {
-        for (let i = 0; i < 9; i++) {
+      
+      function startRandom() {
+        // Generate a random countdown duration between 2 and 10 seconds
+        var countdownDuration = Math.floor(Math.random() * 9) + 2;
+        
+        document.getElementById("counter").innerHTML = countdownDuration;
+        
+        for (let i = 0; i < countdownDuration; i++) {
           setTimeout(function(i) {
             return function() {
-              document.getElementById("counter").innerHTML = i;
+              document.getElementById("counter").innerHTML = countdownDuration;
             };
-          }(i), (8 - i) * 1000);
+          }(i), i * 1000);
         }
-  
+      }
+      
+      function startTime() {
+        // Reset the counter
+        document.getElementById("counter").innerHTML = "Count";
+
+        // Start the random countdown
+        startRandom();
+        
         setTimeout(function() {
           if (reactTime === undefined) {
             document.getElementById("target").innerHTML = "Too Slow";
@@ -46,4 +59,10 @@
       }
     </script>
   </body>
-  </html>
+</html>
+
+
+
+
+
+

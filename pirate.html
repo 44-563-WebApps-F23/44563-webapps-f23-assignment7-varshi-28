@@ -68,6 +68,16 @@
             height: 75px;
             object-fit: cover;
         }
+        .new-game-button {
+        background-color:  #9a70a4;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
 
     </style>
 </head>
@@ -79,6 +89,8 @@
         <p class="try" id="penalty">Penalty is zero.</p>
         <p class="help_style" onclick="help()">Click for help.</p>
         <p class="help" id="help">Help report.</p>
+        
+    <button class="new-game-button" onclick="newGame()">New Game</button>
 
         <div class="game-field">
             
@@ -239,7 +251,24 @@
     penalty += 2;
     document.getElementById("penalty").textContent = "Penalty is " + penalty;
 }
-   
+      
+        function newGame() {
+            treasureLocation = Math.floor(Math.random() * 25);
+            trapLocation = Math.floor(Math.random() * 25);
+            checkCount = 0;
+            penalty = 0;
+            lastCheck = 0;
+            gameOver = false;
+            for (var i = 0; i < 25; i++) {
+                var img = document.getElementById(i.toString());
+                img.src = "startimage.jpg";
+                img.style.backgroundColor = "";
+            }
+            document.getElementById('penalty').textContent = "Penalty is 0";
+            document.getElementById('locations').textContent = "Number of locations checked is 0";
+        }
     </script>
+   </script>
+    
 </body>
 </html>
