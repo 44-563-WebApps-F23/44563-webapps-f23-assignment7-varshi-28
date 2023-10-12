@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new title</title>
+    <title>Treasure Hunt</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,15 +13,6 @@
         }
 
        
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #46a3a0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
 
         p {
             font-size: 18px;
@@ -32,24 +23,32 @@
         h1 {
             font-family:  -apple-system;
         }
-        .info {
+        .try {
         font-size: 18px;
         margin: 10px 0;
         padding: 10px;
-        background-color: #f9f9f9;
-        
-       
+        background-color: #9a70a4;
+        color:white;       
        
     }
 
     /* Styling for the "Click for help" paragraph */
-    .help {
+    .help_style {
        
         color: #950f0f;
         cursor: pointer;
         text-align: left;
+        text-align: center;
        
     }
+    .help {
+       
+       color: #950f0f;
+       
+       text-align: left;
+       text-align: center;
+      
+   }
     .game-location {
  
   color: #fff; /* Text color */
@@ -74,106 +73,190 @@
 </head>
 <body>
    
-        <h1>Find the treasure by varshitha Lavu </h1>
-    
-    
-        <p class="info">Click on the locations to search for treasure, beware the traps</p>
-        <p class="info" id="locations">Number of locations checked is zero.</p>
-        <p class="info" id="penalty">Penalty is zero.</p>
-        <p class="help">Click for help.</p>
-        <p class="help" id="help">Help report</p>
-     <div class="game-field">
+        <h1><center>Find the Treasure by Varshitha Lavu</center></h1>
+        <p class="try">Click on the locations to search for treasure, beware the traps</p>
+        <p class="try" id="locations">Number of locations checked is zero.</p>
+        <p class="try" id="penalty">Penalty is zero.</p>
+        <p class="help_style" onclick="help()">Click for help.</p>
+        <p class="help" id="help">Help report.</p>
+
+        <div class="game-field">
             
          <div class="game-location">
-                <img class="game-image" src="startimage.jpg" alt="startimage">
+                <img id="0" class="game-image" src="startimage.jpg" onclick="check(0)" alt="startimage">
             </div>
             <div class="game-location">
-                <img class="game-image"  src="startimage.jpg" alt="startimage">
+                <img id="1" class="game-image"  src="startimage.jpg"  onclick="check(1)" alt="startimage">
             </div>
             <div class="game-location">
-                <img class="game-image"  src="startimage.jpg" alt="startimage">
+                <img id="2" class="game-image"  src="startimage.jpg"  onclick="check(2)" alt="startimage">
             </div>
             <div class="game-location">
-                <img class="game-image"  src="startimage.jpg" alt="startimage">
+                <img id="3" class="game-image"  src="startimage.jpg" onclick="check(3)" alt="startimage">
             </div>
             <div class="game-location">
-                <img class="game-image"  src="startimage.jpg" alt="startimage">
+                <img id="4" class="game-image"  src="startimage.jpg" onclick="check(4)" alt="startimage">
             </div>
         </div>
 
         <div class="game-field">
             
             <div class="game-location">
-                   <img class="game-image" src="startimage.jpg" alt="startimage">
+                   <img id="5" class="game-image" src="startimage.jpg" onclick="check(5)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img  id="6"class="game-image"  src="startimage.jpg" onclick="check(6)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="7"  class="game-image"  src="startimage.jpg" onclick="check(7)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="8" class="game-image"  src="startimage.jpg"  onclick="check(8)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="9" class="game-image"  src="startimage.jpg" onclick="check(9)" alt="startimage">
                </div>
            </div>
            <div class="game-field">
             
             <div class="game-location">
-                   <img class="game-image" src="startimage.jpg" alt="startimage">
+                   <img id="10" class="game-image" src="startimage.jpg" onclick="check(10)"  alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="11" class="game-image"  src="startimage.jpg"  onclick="check(11)"alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="12" class="game-image"  src="startimage.jpg"  onclick="check(12)"alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="13" class="game-image"  src="startimage.jpg"  onclick="check(13)"alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="14" class="game-image"  src="startimage.jpg" onclick="check(14)" alt="startimage">
                </div>
            </div>
            <div class="game-field">
             
             <div class="game-location">
-                   <img class="game-image" src="startimage.jpg" alt="startimage">
+                   <img id="15" class="game-image" src="startimage.jpg"  onclick="check(15)"alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="16" class="game-image"  src="startimage.jpg" onclick="check(16)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="17" class="game-image"  src="startimage.jpg" onclick="check(17)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="18" class="game-image"  src="startimage.jpg" onclick="check(18)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="19" class="game-image"  src="startimage.jpg" onclick="check(19)" alt="startimage">
                </div>
            </div>
 
         <div class="game-field">
             
             <div class="game-location">
-                   <img class="game-image" src="startimage.jpg" alt="startimage">
+                   <img id="20" class="game-image" src="startimage.jpg" onclick="check(20)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="21" class="game-image"  src="startimage.jpg"  onclick="check(21)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="22" class="game-image"  src="startimage.jpg" onclick="check(22)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="23" class="game-image"  src="startimage.jpg"  onclick="check(23)" alt="startimage">
                </div>
                <div class="game-location">
-                   <img class="game-image"  src="startimage.jpg" alt="startimage">
+                   <img id="24" class="game-image"  src="startimage.jpg"  onclick="check(24)" alt="startimage">
                </div>
            </div>
     </div>
+    <script>
+        // Declare an array of 25 unique IDs
+        var ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"];
+
+
+        var checkCount = 0;
+        var penalty = 0;
+        var lastCheck = 0;
+        var treasureLocation = 5;
+        var trapLocation = 18;
+        var gameOver = false;
+
+        function check(position) {
+        if (gameOver) {
+            return;
+        }
+
+        if(!gameOver){
+                let IDS = document.getElementById(ids[position])
+               console.log(IDS)
+
+               if(position == treasureLocation){
+                    IDS.src = "treasureimage.jpg"
+                    gameOver = true
+                    penalty = penalty - 3
+                    
+               }else if(position==trapLocation){
+                    IDS.src = "trapimage.png"
+                    gameOver = true
+                    penalty = penalty + 4
+               }else{
+                    IDS.src = "pirateimage.jpg"
+                    penalty = penalty + 1
+               }
+               
+               checkCount = checkCount + 1
+
+               lastCheck = position
+
+               document.getElementById('penalty').innerHTML = `penalty is ${penalty}`
+               document.getElementById('locations').innerHTML = "Number of locations checked is " + checkCount
+            }
+        }
+
+    function help() {
+    // a. Compute the row and col for the treasure and the last location.
+    var lRow = Math.floor(lastCheck / 5);
+    var lCol = lastCheck % 5;
+    var tRow = Math.floor(treasureLocation / 5);
+    var tCol = treasureLocation % 5;
+
+    // Calculate the Manhattan distance between the last location and the treasure.
+    var distance = Math.abs(lRow - tRow) + Math.abs(lCol - tCol);
+
+    // b. If the last location and the treasure are next to each other, return "Can smell it".
+    if (distance === 1) {
+        document.getElementById("help").textContent = "Can Smell It";
+
+        // Mark the "Can Smell It" square in red.
+        var id = lastCheck.toString();
+        var imageElement = document.getElementById(id);
+        imageElement.style.backgroundColor = "red";
+    }
+    // c. If the last location and the treasure are two away from each other, return "Close Matie".
+    else if (distance === 2) {
+        document.getElementById("help").textContent = "Close Matie";
+
+        // Mark the "Close Matie" square in orange.
+        var id = lastCheck.toString();
+        var imageElement = document.getElementById(id);
+        imageElement.style.backgroundColor = "orange";
+    }
+    // d. Otherwise, return "Step Faster".
+    else {
+        document.getElementById("help").textContent = "Step Faster";
+    }
+
+    // e. Add two to the penalty.
+    penalty += 2;
+
+    // f. Update the text on the element with id penalty.
+    document.getElementById("penalty").textContent = "Penalty is " + penalty;
+}
+   
+    </script>
 </body>
 </html>
