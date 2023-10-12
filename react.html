@@ -38,8 +38,8 @@
           if (reactTime === undefined) {
             document.getElementById("target").innerHTML = "Too Slow";
           } else {
-            let endTime = Date.now();
-            let elapsed = endTime - reactTime;
+            var endTime = Date.now();
+            var elapsed = endTime - reactTime;
             document.getElementById("target").innerHTML = "Time was " + elapsed + "ms";
           }
         }, 8000);
