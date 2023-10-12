@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html> <head> 
+    <title>Merge Items</title>
+    <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: rgb(153, 59, 235);
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style></head>
+
+
+
+<body>
+    <h2>Varshitha builds a merger</h2>
+		<div class="flex-container" id="target">
+		  <div>row item 1</div>   
+		  <div>row item 2</div>  
+		  <div>row item 3</div>  
+		</div>
+	
+        <p>Press the button to create a new element of type div and then add it to the container.</p>
+        <input type="text" id="inputText" placeholder="Enter text">
+        <button onclick="addEnd()">Add end</button>
+    </body>
+    
+    <script>
+        function addEnd() {
+            const inputValue = document.getElementById("inputText").value;
+            if (inputValue) {
+                // Create a new div element and set its properties
+                const newElement = document.createElement("div");
+                newElement.innerHTML = inputValue;
+                newElement.className = "merger";
+    
+                // Append the new element to the container
+                const container = document.getElementById('target');
+                container.appendChild(newElement);
+            }
+        }
+    </script>
+    </html>
